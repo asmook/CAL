@@ -1,0 +1,24 @@
+.genres {
+    background: #369;
+    text-align: center;
+}
+
+.genres ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.genres li {
+    display: inline-block;
+    padding: 20px 50px
+}
+
+.genres li a {
+    color: white;
+}
+
+.createNew {
+    margin-top: 20px;
+    width: 100%;
+}
