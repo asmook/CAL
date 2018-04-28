@@ -7,6 +7,7 @@ import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
 import Forum from './components/forum'
+import Adventure from './components/adventure'
 
 class App extends Component {
   constructor() {
@@ -57,11 +58,11 @@ class App extends Component {
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {/* {this.state.loggedIn &&
-        // <div>
-        //   <p>Join the party, {this.state.username}!</p>
-        //   <Home/>
-        // </div>
-        } */}
+        <div>
+          {/* <p>Join the party, {this.state.username}!</p>
+          <Home/>
+          <Forum/>
+        </div> */}
         {/* Routes to different components */}
         <Route
           exact path="/"
@@ -83,6 +84,9 @@ class App extends Component {
         <Route
           exact path="/forum"
           component={Forum} />
+        <Route
+          exact path="/forum/adventure"
+          component={Adventure} />
 
       </div>
     );

@@ -21,6 +21,9 @@ class Navbar extends Component {
               loggedIn: false,
               username: null
             })
+            this.setState({
+                redirectTo: '/'
+            })
           }
         }).catch(error => {
             console.log('Logout error')
@@ -31,10 +34,10 @@ class Navbar extends Component {
         const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ')
         console.log(this.props);
-        
+    
         return (
             <div>
-
+                
                 <header className="navbar App-header" id="nav-container">
                     <div className="col-4" >
                         {loggedIn ? (
@@ -66,7 +69,6 @@ class Navbar extends Component {
             </div>
 
         );
-
     }
 }
 
