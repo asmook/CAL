@@ -22,3 +22,14 @@
     margin-top: 20px;
     width: 100%;
 }
+.posts {
+	margin-top: 10px;
+}
+.posts li {
+	text-align: left;
+}
+.card-header {
+	background: #999;
+	color: 000;
+	font-weight: 700;
+}
