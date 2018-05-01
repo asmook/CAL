@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 import Results from './Result'
+import "./forum.css";
 
 
 class Forum extends Component {
