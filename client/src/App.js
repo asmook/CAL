@@ -7,6 +7,7 @@ import LoginForm from './components/login-form'
 import Navbar from './components/navbar'
 import Home from './components/home'
 import Forum from './components/forum'
+import NewStory from './components/Newstory'
 
 class App extends Component {
   constructor() {
@@ -83,7 +84,14 @@ class App extends Component {
         <Route
           exact path="/forum"
           component={Forum} />
-
+        <Route
+          path="/newstory"
+          render={() =>
+            <NewStory
+              username={this.state.username}
+              loggedIn={this.state.loggedIn}
+            />}
+          />
       </div>
     );
   }
