@@ -37,12 +37,15 @@ class Navbar extends Component {
                             <h1 className="App-title">StoryBook</h1>
                         {loggedIn ? (
                             <section className="navbar-section">
+                                <Link to="/forum" className="btn btn-link ml-5">
+                                    <span className="text-secondary">stories</span>
+				                </Link>
                                 <Link to="#" className="btn btn-link text-secondary" onClick={this.logout}>
                                 <span className="text-secondary">logout</span></Link>
                             </section>
                         ) : (
                             <section className="navbar-section">
-                                <Link to="/" className="btn btn-link text-secondary">
+                                <Link to="/" className="btn btn-link text-secondary ml-5">
                                     <span className="text-secondary">home</span>
                                 </Link>
                                 <Link to="/login" className="btn btn-link text-secondary">
@@ -50,6 +53,9 @@ class Navbar extends Component {
 				                </Link>
                                 <Link to="/signup" className="btn btn-link">
                                     <span className="text-secondary">sign up</span>
+				                </Link>
+                                <Link to="/forum" className="btn btn-link">
+                                    <span className="text-secondary">stories</span>
 				                </Link>
                             </section>
                         )}
