@@ -39,7 +39,7 @@ class Fantasy extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="createNew float-right">
-                            <Link to="/newstory" className="btn btn-outline-info float-right" role="button">Create New Story</Link>
+                            <Link to="/newstory" className="btn btn-warning float-right" role="button">Create New Story</Link>
                         </div>
                         <div className="posts col-md-12">
                             <ul>
