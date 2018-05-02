@@ -1,26 +1,25 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
-import Results from './Result'
-import { Link } from 'react-router-dom'
-import "./forum.css";
+import Results from '../Result'
+import {Link} from 'react-router-dom'
+import "../../components/style.css"
 
 
-class Forum extends Component {
+class Horror extends Component {
 
     state = {
         articles: []
     }
 
     componentDidMount() {
-        this.getTopics()
+        this.getHorror()
     }
 
-    getTopics = () => {
-        axios.get("/all").then(res => {
-            // console.log(res.data)
+    getHorror = () => {
+        axios.get("/horror").then(res => {
             this.setState({ articles: res.data })
-            console.log(this.state.articles)
         })
+        console.log(this.state.articles)
     }
 
     render() {
@@ -64,4 +63,4 @@ class Forum extends Component {
     }
 }
 
-export default Forum;
+export default Horror;

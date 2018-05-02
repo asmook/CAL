@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Route, Link } from 'react-router-dom'
+import { Route} from 'react-router-dom'
 // components
 import Signup from './components/sign-up'
 import LoginForm from './components/login-form'
@@ -8,6 +8,12 @@ import Navbar from './components/navbar'
 import Home from './components/home'
 import Forum from './components/forum'
 import NewStory from './components/Newstory'
+import Funny from './components/Genres/funny'
+import Horror from './components/Genres/horror'
+import Mystery from './components/Genres/mystery'
+import Fantasy from './components/Genres/fantasy'
+import Romance from './components/Genres/romance'
+import Drama from './components/Genres/drama'
 
 class App extends Component {
   constructor() {
@@ -92,6 +98,24 @@ class App extends Component {
               loggedIn={this.state.loggedIn}
             />}
           />
+          <Route
+          exact path="/forum/funny"
+          component={Funny} />
+          <Route
+          exact path="/forum/horror"
+          component={Horror} />
+          <Route
+          exact path="/forum/mystery"
+          component={Mystery} />
+          <Route
+          exact path="/forum/fantasy"
+          component={Fantasy} />
+          <Route
+          exact path="/forum/romance"
+          component={Romance} />
+          <Route
+          exact path="/forum/drama"
+          component={Drama} />
       </div>
     );
   }
