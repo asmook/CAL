@@ -18,31 +18,31 @@ router.post("/post", (req,res) => {
     })
 })
 
-router.get("/forum", (req,res) => {
+router.get("/all", (req,res) => {
     Adventure.find({}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/funny", (req,res) => {
+router.get("/funny", (req,res) => {
     Adventure.find({genre: "funny"}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/horror", (req,res) => {
+router.get("/horror", (req,res) => {
     Adventure.find({genre: "horror"}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/romance", (req,res) => {
+router.get("/romance", (req,res) => {
     Adventure.find({genre: "romance"}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/mystery", (req,res) => {
+router.get("/mystery", (req,res) => {
     Adventure.find({genre: "mystery"}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/drama", (req,res) => {
+router.get("/drama", (req,res) => {
     Adventure.find({genre: "drama"}).sort({date: -1}).then(results => res.json(results))
 })
 
-router.get("/forum/fantasy", (req,res) => {
+router.get("/fantasy", (req,res) => {
     Adventure.find({genre: "fantasy"}).sort({date: -1}).then(results => res.json(results))
 })
 
