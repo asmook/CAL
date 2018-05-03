@@ -1,6 +1,11 @@
+ /* .main-container{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNaQFgsAX2btf4xoSkaa6AosXS9ZYndl8tJjsJNUZzqXt3EIbx');
+} */
+
 h3 {
-    margin-left: 20%;
+    margin-left: 15%;
     margin-top: 3%;
+    padding-bottom: 7%;
   }
   
   body {
@@ -31,6 +36,7 @@ h3 {
     max-width: 900px;
     list-style-type: none;
     text-align: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNaQFgsAX2btf4xoSkaa6AosXS9ZYndl8tJjsJNUZzqXt3EIbx');
   }
   @media (max-width: 991px) {
     .carousel__slide {
@@ -44,7 +50,7 @@ h3 {
   
   .carousel-slide__content {
     margin-bottom: 19px;
-    font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
   }
   @media (max-width: 991px) {
@@ -55,7 +61,7 @@ h3 {
   
   .carousel-slide__author,
   .carousel-slide__source {
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
   }
   @media (min-width: 992px) {

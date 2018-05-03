@@ -1,5 +1,5 @@
 .genres {
-    background: #369;
+    /* background: #369; */
     text-align: center;
 }
 
@@ -29,7 +29,8 @@
 	text-align: left;
 }
 .card-header {
-	background: #999;
+    background: ghostwhite;
 	color: 000;
-	font-weight: 700;
+    font-weight: 600;
+    padding: -10%;
 }
