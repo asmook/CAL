@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Route} from 'react-router-dom'
+import './App.css'
 // components
 import Signup from './components/sign-up'
 import LoginForm from './components/login-form'

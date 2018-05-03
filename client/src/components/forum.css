@@ -1,16 +1,30 @@
 .App{
-    background-color: teal;
+    background-color: cadetblue;
 }
 ul {
     background-color: cadetblue;
 }
 
+li {
+    border:black;
+}
+
 .card-body {
-    background-color: cadetblue;
+    background-color: ghostwhite;
 }
 
 .card-header {
-    background-color: ghostwhite;
+    background-color: red;
+    border-bottom-color:ghostwhite;
+}
+
+.card.border-info {
+    border-bottom-color: black;
+}
+
+.btn {
+    font-family: 'Courier New', Courier, monospace;
+    font: ghostwhite;
 }
 
 
