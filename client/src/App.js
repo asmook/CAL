@@ -14,6 +14,7 @@ import Mystery from './components/Genres/mystery'
 import Fantasy from './components/Genres/fantasy'
 import Romance from './components/Genres/romance'
 import Drama from './components/Genres/drama'
+import Comments from './components/comments'
 
 class App extends Component {
   constructor() {
@@ -116,6 +117,9 @@ class App extends Component {
           <Route
           exact path="/forum/drama"
           component={Drama} />
+          <Route
+          exact path="/story/:id"
+          component={Comments} />
       </div>
     );
   }

@@ -46,5 +46,8 @@ router.get("/fantasy", (req,res) => {
     Adventure.find({genre: "fantasy"}).sort({date: -1}).then(results => res.json(results))
 })
 
+router.get("/api/story/:id", (req,res) => {
+    Adventure.findById(req.params.id).then(results => res.json(results))
+})
 
 module.exports = router
