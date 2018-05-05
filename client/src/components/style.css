@@ -93,19 +93,15 @@
 .SignUpContainer {
     text-align: center;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 10%;
     color: ghostwhite;
 }
 
 .LogInContainer {
     text-align: center;
     padding: 10px;
-    margin-top: 30px;
+    margin-top: 10%;
     color: ghostwhite;
-}
-
-.form-label {
-    color: black;
 }
 
 input {
@@ -113,8 +109,7 @@ input {
     padding: 7px;
     padding-left: 40px;
     padding-right: 40px;
-    left: 50%;    
-    margin-left: 50%
+    margin: 8px;
 }
 
 .btn {

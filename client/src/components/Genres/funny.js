@@ -41,7 +41,7 @@ class Funny extends Component {
                 <div class="jumbotron jumbotron-fluid" id="funnytron">
                     <div class="container">
                         <h1 class="display-4 text-center">Funny Stories</h1>
-                        <p class="lead text-center">Only the funniest stories are told here..</p>
+                        <p class="lead text-center">Only the funniest stories are told here...</p>
                     </div>
                 </div>
                 <div className="container">
