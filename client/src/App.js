@@ -16,6 +16,7 @@ import Fantasy from './components/Genres/fantasy'
 import Romance from './components/Genres/romance'
 import Drama from './components/Genres/drama'
 import Comments from './components/comments'
+import Footer from './components/footer'
 
 class App extends Component {
   constructor() {
@@ -91,7 +92,11 @@ class App extends Component {
         />
         <Route
           exact path="/forum"
-          component={Forum} />
+          render={() =>
+          <Forum
+            loggedIn={this.state.loggedIn}
+          />}
+        />
         <Route
           path="/newstory"
           render={() =>
@@ -101,26 +106,51 @@ class App extends Component {
             />}
           />
           <Route
-          exact path="/forum/funny"
-          component={Funny} />
+            path="/forum/funny"
+            render={() =>
+            <Funny
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
-          exact path="/forum/horror"
-          component={Horror} />
+            path="/forum/horror"
+            render={() =>
+            <Horror
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
-          exact path="/forum/mystery"
-          component={Mystery} />
+            path="/forum/mystery"
+            render={() =>
+            <Mystery
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
-          exact path="/forum/fantasy"
-          component={Fantasy} />
+            path="/forum/fantasy"
+            render={() =>
+            <Fantasy
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
-          exact path="/forum/romance"
-          component={Romance} />
+            path="/forum/romance"
+            render={() =>
+            <Romance
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
-          exact path="/forum/drama"
-          component={Drama} />
+            path="/forum/drama"
+            render={() =>
+            <Drama
+              loggedIn={this.state.loggedIn}
+            />}
+          />
           <Route
           exact path="/story/:id"
           component={Comments} />
+          <Footer/>
       </div>
     );
   }

@@ -34,3 +34,49 @@
     font-weight: 600;
     padding: -10%;
 }
+
+#funnytron {
+        background-image: url("../images/funny.jpg");
+        background-size: cover;
+        background-position: 0% 25%;
+        text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#horrortron {
+    background-image: url("../images/horror.jpg");
+    background-size: cover;
+    background-position: 0% 25%;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#romancetron {
+    background-image: url("../images/romance.jpg");
+    background-size: cover;
+    background-position: 0% 50%;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#mysterytron {
+    background-image: url("../images/mystery.jpg");
+    background-size: cover;
+    background-position: 0% 25%;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#dramatron {
+    background-image: url("../images/drama.jpg");
+    background-size: cover;
+    background-position: 0% 25%;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#fantasytron {
+    background-image: url("../images/fantasy.jpg");
+    background-size: cover;
+    background-position: 0% 50%;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.lead {
+    color: white;
+}

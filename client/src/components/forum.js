@@ -24,6 +24,7 @@ class Forum extends Component {
     }
 
     render() {
+        const loggedIn = this.props.loggedIn;
         return (
             <Fragment>
                 <div className="genres">
@@ -37,11 +38,22 @@ class Forum extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
+                <div class="jumbotron jumbotron-fluid" id="alltron">
+                    <div class="container">
+                        <h1 class="display-4 text-center">All Stories</h1>
+                        <p class="lead text-center">These are all the stories...</p>
+                    </div>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="createNew float-right">
+                        {loggedIn ? (
                             <Link to="/newstory" className="btn btn-warning float-right" role="button">Create New Story</Link>
-                        </div>
+                        ) : (
+                            <Link to="/login" className="btn btn-warning float-right" role="button">Create New Story</Link>
+                        )}
+                            </div>
+                        
                         <div className="posts col-md-12">
                             <ul>
                                 {this.state.articles.map(article => (

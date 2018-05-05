@@ -23,6 +23,7 @@ class Fantasy extends Component {
     }
 
     render() {
+        const loggedIn = this.props.loggedIn;
         return (
             <Fragment>
                 <div className="genres">
@@ -36,10 +37,20 @@ class Fantasy extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
+                <div className="jumbotron jumbotron-fluid" id="fantasytron">
+                    <div className="container">
+                        <h1 className="display-4 text-center">Fantasy Stories</h1>
+                        <p className="lead text-center">Is this real life? Or is this just fantasy?...</p>
+                    </div>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="createNew float-right">
+                        {loggedIn ? (
                             <Link to="/newstory" className="btn btn-warning float-right" role="button">Create New Story</Link>
+                        ) : (
+                            <Link to="/login" className="btn btn-warning float-right" role="button">Create New Story</Link>
+                        )}
                         </div>
                         <div className="posts col-md-12">
                             <ul>
