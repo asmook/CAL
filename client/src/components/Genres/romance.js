@@ -3,8 +3,6 @@ import axios from 'axios';
 import Results from '../Result'
 import {Link} from 'react-router-dom'
 import "../../components/style.css"
-import "../../components/footer.js"
-
 
 class Romance extends Component {
 

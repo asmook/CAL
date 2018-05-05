@@ -82,26 +82,25 @@
 }
 
 .footer {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;    
-    color: white;
     text-align: center;
+    margin-top: 10%;
 }
 
 .SignUpContainer {
     text-align: center;
     padding: 10px;
     margin-top: 10%;
-    color: ghostwhite;
+    color: darkred;
 }
 
 .LogInContainer {
     text-align: center;
     padding: 10px;
     margin-top: 10%;
-    color: ghostwhite;
+    color: darkred;
 }
 
 input {

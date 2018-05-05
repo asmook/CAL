@@ -52,7 +52,9 @@ class Descriptions extends Component {
     }
 
     getDescriptions = () => {
-      axios.get 
+      axios.get("/all").then(res => {
+        console.log(res.data)
+      }) 
     }
 }   
 

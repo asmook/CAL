@@ -18,6 +18,7 @@ import Drama from './components/Genres/drama'
 import Comments from './components/comments'
 import Footer from './components/footer'
 
+
 class App extends Component {
   constructor() {
     super()

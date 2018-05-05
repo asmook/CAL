@@ -5,7 +5,7 @@
 h3 {
     margin-left: 25%;
     margin-top: 3%;
-    padding-bottom: 7%;
+    padding-bottom: 6%;
     color: ghostwhite;
   }
   
@@ -47,6 +47,7 @@ h3 {
   }
   .carousel__slide--active {
     display: block;
+    padding: 5%;
   }
   
   .carousel-slide__content {

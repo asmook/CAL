@@ -1,9 +1,10 @@
 .navbar {
     height: 50px;
+    background-color: ghostwhite;
 }
 
 h1 {
-    color: red;
+    color: darkred;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
