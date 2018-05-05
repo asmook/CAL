@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 // components
 import Signup from './components/sign-up'
@@ -17,7 +17,7 @@ import Romance from './components/Genres/romance'
 import Drama from './components/Genres/drama'
 import Comments from './components/comments'
 import Footer from './components/footer'
-
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 class App extends Component {
   constructor() {
     super()
@@ -35,7 +35,7 @@ class App extends Component {
     this.getUser()
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -62,96 +62,113 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-   
-        <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {/* {this.state.loggedIn &&
+      <Router>
+        <Route render={({ location }) => (
+
+
+          <div className="App">
+
+            <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+            {/* greet user if logged in: */}
+            {/* {this.state.loggedIn &&
         // <div>
         //   <p>Join the party, {this.state.username}!</p>
         //   <Home/>
         // </div>
         } */}
-        {/* Routes to different components */}
-        <Route
-          exact path="/"
-          component={Home} />
-        <Route
-          path="/login"
-          render={() =>
-            <LoginForm
-              updateUser={this.updateUser}
-            />}
+            {/* Routes to different components */}
+            <TransitionGroup>
+              <CSSTransition
+                key={location.key}
+                timeout={300}
+                classNames="fade"
+              >
+                <Switch location={location}>
+                  <Route
+                    exact path="/"
+                    component={Home} />
+                  <Route
+                    path="/login"
+                    render={() =>
+                      <LoginForm
+                        updateUser={this.updateUser}
+                      />}
+                  />
+                  <Route
+                    path="/signup"
+                    render={() =>
+                      <Signup
+                        signup={this.signup}
+                      />}
+                  />
+                  <Route
+                    exact path="/forum"
+                    render={() =>
+                      <Forum
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/newstory"
+                    render={() =>
+                      <NewStory
+                        username={this.state.username}
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/funny"
+                    render={() =>
+                      <Funny
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/horror"
+                    render={() =>
+                      <Horror
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/mystery"
+                    render={() =>
+                      <Mystery
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/fantasy"
+                    render={() =>
+                      <Fantasy
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/romance"
+                    render={() =>
+                      <Romance
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    path="/forum/drama"
+                    render={() =>
+                      <Drama
+                        loggedIn={this.state.loggedIn}
+                      />}
+                  />
+                  <Route
+                    exact path="/story/:id"
+                    component={Comments} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+            <Footer />
+          </div>
+        )}
         />
-        <Route
-          path="/signup"
-          render={() =>
-            <Signup
-              signup={this.signup}
-            />}
-        />
-        <Route
-          exact path="/forum"
-          render={() =>
-          <Forum
-            loggedIn={this.state.loggedIn}
-          />}
-        />
-        <Route
-          path="/newstory"
-          render={() =>
-            <NewStory
-              username={this.state.username}
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/funny"
-            render={() =>
-            <Funny
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/horror"
-            render={() =>
-            <Horror
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/mystery"
-            render={() =>
-            <Mystery
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/fantasy"
-            render={() =>
-            <Fantasy
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/romance"
-            render={() =>
-            <Romance
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-            path="/forum/drama"
-            render={() =>
-            <Drama
-              loggedIn={this.state.loggedIn}
-            />}
-          />
-          <Route
-          exact path="/story/:id"
-          component={Comments} />
-          <Footer/>
-      </div>
+      </Router>
     );
   }
 }
