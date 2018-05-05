@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import "./home.css";
-import Carousel from "./carousel.js"
+import './home.css'
+import Carousel from './carousel.js'
+import axios from 'axios'
 
 const carouselSlidesData = [
     {
@@ -40,6 +41,20 @@ const carouselSlidesData = [
       source: "twitter"
     }
   ];
+
+class Descriptions extends Component {
+    state = {
+        articles: []
+    }
+
+    componentDidMount(){
+        this.getDescriptions()
+    }
+
+    getDescriptions = () => {
+      axios.get 
+    }
+}   
 
 const Home = () => (
     <div className= "main-container">
