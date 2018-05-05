@@ -8,7 +8,6 @@ const Results = props => (
             <p className="card-text">{props.description}</p>
             <p className="card-text">Author: <strong>{props.author}</strong></p>
             <Link to={"/story/" + props.id}  className="btn btn-primary" role="button">Add to this story</Link>
-            <Link to={"/story/" + props.id}  className="btn btn-primary" role="button">Leave a comment</Link>
         </div>
     </li>
 )

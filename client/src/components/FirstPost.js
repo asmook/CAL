@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const FirstPost = props => (
 
-            <div class="card mt-5">
+            <div class="card mt-5 border-danger">
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
                         <p>{props.description}</p>
