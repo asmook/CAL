@@ -50,7 +50,7 @@ h3 {
   
   .carousel-slide__content {
     margin-bottom: 19px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
   }
   @media (max-width: 991px) {
@@ -61,7 +61,7 @@ h3 {
   
   .carousel-slide__author,
   .carousel-slide__source {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
   }
   @media (min-width: 992px) {

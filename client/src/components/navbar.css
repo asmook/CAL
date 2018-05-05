@@ -1,7 +1,11 @@
+.navbar {
+    height: 50px;
+}
+
 h1 {
     color: red;
     text-align: left;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .text-secondary {

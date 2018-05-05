@@ -80,3 +80,45 @@
 .lead {
     color: white;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;    
+    color: white;
+    text-align: center;
+}
+
+.SignUpContainer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    color: ghostwhite;
+}
+
+.LogInContainer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    color: ghostwhite;
+}
+
+.form-label {
+    color: black;
+}
+
+input {
+    text-align: center;
+    padding: 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    left: 50%;    
+    margin-left: 50%
+}
+
+.btn {
+    background-color: ghostwhite;
+    color: teal;
+    border: black;
+}

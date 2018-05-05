@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './style.css'
 
 class Signup extends Component {
 	constructor() {
@@ -48,12 +49,13 @@ class Signup extends Component {
 
 render() {
 	return (
+		<div className="SignUpContainer">
 		<div className="SignupForm">
 			<h4>Sign up</h4>
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
+						<label className="form-label" htmlFor="username"></label>
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
@@ -68,11 +70,11 @@ render() {
 				</div>
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password: </label>
+						<label className="form-label" htmlFor="password"> </label>
 					</div>
 					<div className="col-3 col-mr-auto">
 						<input className="form-input"
-							placeholder="password"
+							placeholder="Password"
 							type="password"
 							name="password"
 							value={this.state.password}
@@ -86,11 +88,11 @@ render() {
 						className="btn btn-primary col-1 col-mr-auto"
 						onClick={this.handleSubmit}
 						type="submit"
-					>Sign up</button>
+					>Submit</button>
 				</div>
 			</form>
 		</div>
-
+	</div>
 	)
 }
 }
