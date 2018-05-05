@@ -7,7 +7,8 @@ class Comments extends Component {
 
     state = {
         story: "",
-        author: ""
+        author: "",
+        comment: ""
     }
 
     componentDidMount() {
@@ -21,6 +22,10 @@ class Comments extends Component {
         })
     }
 
+    handleSubmit(event){
+        event.preventDefault()
+        console.log("hi sarah");
+    }
     render() {
         return (
             <div>
@@ -36,13 +41,14 @@ class Comments extends Component {
                             name="description"
                             rows="10"
                             cols="150"
-                            value=""
+                            value= {this.state.comment}
+                            onChange= {(event) => this.setState({comment: event.target.value})}
                         />
                     </div>
                     <button
                         className="btn btn-primary col-1"
 
-                        // onClick={this.handleSubmit}
+                        onClick={(event)=>this.handleSubmit(event)}
                         type="submit">Submit</button>
                 </form>
             </div>
