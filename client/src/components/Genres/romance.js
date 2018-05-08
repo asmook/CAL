@@ -36,10 +36,10 @@ class Romance extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
-                <div class="jumbotron jumbotron-fluid" id="romancetron">
-                    <div class="container">
-                        <h1 class="display-4 text-center">Romance Stories</h1>
-                        <p class="lead text-center">Love is all you need...</p>
+                <div className="jumbotron jumbotron-fluid" id="romancetron">
+                    <div className="container">
+                        <h1 className="display-4 text-center">Romance Stories</h1>
+                        <p className="lead text-center">Love is all you need...</p>
                     </div>
                 </div>
                 <div className="container">

@@ -38,10 +38,10 @@ class Drama extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
-                <div class="jumbotron jumbotron-fluid" id="dramatron">
-                    <div class="container">
-                        <h1 class="display-4 text-center">Drama Stories</h1>
-                        <p class="lead text-center">Stop being such a drama queen...</p>
+                <div className="jumbotron jumbotron-fluid" id="dramatron">
+                    <div className="container">
+                        <h1 className="display-4 text-center">Drama Stories</h1>
+                        <p className="lead text-center">Stop being such a drama queen...</p>
                     </div>
                 </div>
                 <div className="container">

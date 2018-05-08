@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import './newstory.css'
 
 class NewStory extends Component {
 
@@ -51,86 +52,80 @@ class NewStory extends Component {
                 {loggedIn ? (
                 <div>
                     <div className="form-group">
-                        <div className="col-12">
-                            <label className="form-label" htmlFor="title">Pick the Genre:</label>
+                        <div className="genrePick">
+                        <label className="form-label1" htmlFor="title">Pick the Genre:    </label>
+                            <select name="genre" className="custom-select custom-select-md" value={this.state.genre} onChange={this.handleInputChange}>
+                                <option value="funny">Funny</option>
+                                <option value="horror">Horror</option>
+                                <option value="romance">Romance</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="drama">Drama</option>
+                                <option value="fantasy">Fantasy</option>
+                            </select>
                         </div>
-                        <select name="genre" className="mb-5 custom-select custom-select-lg" value={this.state.genre} onChange={this.handleInputChange}>
-                            <option value="funny">Funny</option>
-                            <option value="horror">Horror</option>
-                            <option value="romance">Romance</option>
-                            <option value="mystery">Mystery</option>
-                            <option value="drama">Drama</option>
-                            <option value="fantasy">Fantasy</option>
-                        </select>
-                        <div className="col-12 col-ml-auto">
-                            <label className="form-label mt-5" htmlFor="title">Title:</label>
+                        <div className="titlePick">    
+                        <label className="form-label2" htmlFor="title">Title:</label>
+                            <div>
+                                <input className="form-input1"
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={this.state.title}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <input className="form-input mt-2 mb-5"
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={this.state.title}
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="col-12 col-ml-auto">
-                            <label className="form-label" htmlFor="description">Story:</label>
-                        </div>
-                        <div className="col-12">
-                            <textarea className="form-input"
-                                type="text"
-                                id="description"
-                                name="description"
-                                rows="15"
-                                cols="100"
-                                value={this.state.description}
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
+                        <div className="descriptionPick">    
+                        <label className="form-label3" htmlFor="description">Story:</label>
+                            <div>
+                                <textarea className="form-input2"
+                                    type="text"
+                                    id="description"
+                                    name="description"
+                                    rows="15"
+                                    cols="100"
+                                    value={this.state.description}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                         </div>   
                     </div>
                     <button onClick={this.handleFormSubmit}>Submit</button>
                 </div>
                 ) : (
                     <div>
                     <div className="form-group">
-                        <div className="col-12">
-                            <label className="form-label" htmlFor="title">Pick the Genre:</label>
-                        </div>
-                        <select name="genre" className="mb-5 custom-select custom-select-lg" value={this.state.genre} onChange={this.handleInputChange} disabled>
-                            <option value="funny">Funny</option>
-                            <option value="horror">Horror</option>
-                            <option value="romance">Romance</option>
-                            <option value="mystery">Mystery</option>
-                            <option value="drama">Drama</option>
-                            <option value="fantasy">Fantasy</option>
-                        </select>
-                        <div className="col-12 col-ml-auto">
-                            <label className="form-label mt-5" htmlFor="title">Title:</label>
-                        </div>
-                        <div>
-                            <input className="form-input mt-2 mb-5"
-                                type="text"
-                                id="title"
-                                name="title"
-                                value={this.state.title}
-                                disabled
-                            />
-                        </div>
-                        <div className="col-12 col-ml-auto">
-                            <label className="form-label" htmlFor="description">Story:</label>
-                        </div>
-                        <div className="col-12">
-                            <textarea className="form-input"
-                                type="text"
-                                id="description"
-                                name="description"
-                                rows="15"
-                                cols="100"
-                                value="Please sign in to make a story"
-                                disabled
-                            />
-                        </div>
+                        <label className="form-label" htmlFor="title">Pick the Genre:</label>
+                            <select name="genre" className="custom-select custom-select-md" value={this.state.genre} onChange={this.handleInputChange} disabled>
+                                <option value="funny">Funny</option>
+                                <option value="horror">Horror</option>
+                                <option value="romance">Romance</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="drama">Drama</option>
+                                <option value="fantasy">Fantasy</option>
+                            </select>
+                        <label className="form-label" htmlFor="title">Title:</label>
+                            <div>
+                                <input className="form-input"
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    value={this.state.title}
+                                    disabled
+                                />
+                            </div>
+                        <label className="form-label" htmlFor="description">Story:</label>
+                            <div className="textarea1">
+                                <textarea className="form-input"
+                                    type="text"
+                                    id="description"
+                                    name="description"
+                                    rows="15"
+                                    cols="100"
+                                    value="Please sign in to make a story"
+                                    disabled
+                                />
+                            </div>
                     </div>
                     <button onClick={this.handleFormSubmit} disabled>Submit</button>
                 </div>
