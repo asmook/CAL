@@ -37,10 +37,10 @@ class Horror extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
-                <div class="jumbotron jumbotron-fluid" id="horrortron">
-                    <div class="container">
-                        <h1 class="display-4 text-center">Horror Stories</h1>
-                        <p class="lead text-center">I'm horrified just thinking about it..</p>
+                <div className="jumbotron jumbotron-fluid" id="horrortron">
+                    <div className="container">
+                        <h1 className="display-4 text-center">Horror Stories</h1>
+                        <p className="lead text-center">I'm horrified just thinking about it...</p>
                     </div>
                 </div>
                 <div className="container">

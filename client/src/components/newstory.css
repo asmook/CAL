@@ -1,0 +1,53 @@
+.form-label1 {
+    font-size: 18px;
+    text-align: left;
+    margin-right: 3%;
+    margin-left: 4%;
+}
+.form-label2,
+.form-label3 {
+    font-size: 18px;
+}
+
+.custom-select {
+    width: 20%;
+}
+
+.form-input1 {
+    width: 50%;
+    border-radius: 8px;
+    text-align: left;
+    padding: 5px;
+}
+
+.form-input2 {
+    width: 50%;
+    border-radius: 8px;
+    text-align: left;
+    border-color: grey;
+    padding: 5px;
+}
+
+.genrePick {
+    margin-top: 3%;
+}
+
+.titlePick {
+    margin-top: 2%;
+    margin-left: 4%;
+}
+.descriptionPick {
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+button {
+    background-color:ghostwhite;
+    color: teal;
+    border: black;
+    margin-left: 4%;
+    border-radius: 8px;
+    padding: 6px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

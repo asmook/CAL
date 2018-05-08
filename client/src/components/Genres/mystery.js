@@ -37,10 +37,10 @@ class Mystery extends Component {
                         <li><Link to="/forum/fantasy">Fantasy</Link></li>
                     </ul>
                 </div>
-                <div class="jumbotron jumbotron-fluid" id="mysterytron">
-                    <div class="container">
-                        <h1 class="display-4 text-center">Mystery Stories</h1>
-                        <p class="lead text-center">What just happened? Who did it?...</p>
+                <div className="jumbotron jumbotron-fluid" id="mysterytron">
+                    <div className="container">
+                        <h1 className="display-4 text-center">Mystery Stories</h1>
+                        <p className="lead text-center">What just happened? Who did it?...</p>
                     </div>
                 </div>
                 <div className="container">
