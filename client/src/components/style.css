@@ -116,3 +116,13 @@ input {
     color: teal;
     border: black;
 }
+
+#commentBox{
+    margin-left: 140px;
+    margin-top:  60px;
+}
+
+#addCommentButton{
+    margin-left: 700px;
+    margin-top: 20px;
+}

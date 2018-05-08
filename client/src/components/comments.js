@@ -92,7 +92,7 @@ class Comments extends Component {
                         <div className="col-12 mt-5">
                             <textarea className="form-input"
                                 type="text"
-                                id="description"
+                                id="commentBox"
                                 name="description"
                                 rows="10"
                                 cols="150"
@@ -102,6 +102,7 @@ class Comments extends Component {
                         </div>
                         <button
                             className="btn btn-primary col-1"
+                            id = "addCommentButton"
 
                             onClick={(event) => this.handleSubmit(event)}
                             type="submit">Submit</button>
