@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Route} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css'
 // components
 import Signup from './components/sign-up'
@@ -36,7 +36,7 @@ class App extends Component {
     this.getUser()
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -64,16 +64,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-   
+
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {/* greet user if logged in: */}
-        {/* {this.state.loggedIn &&
-        // <div>
-        //   <p>Join the party, {this.state.username}!</p>
-        //   <Home/>
-        // </div>
-        } */}
-        {/* Routes to different components */}
         <Route
           exact path="/"
           component={Home} />
@@ -94,9 +86,9 @@ class App extends Component {
         <Route
           exact path="/forum"
           render={() =>
-          <Forum
-            loggedIn={this.state.loggedIn}
-          />}
+            <Forum
+              loggedIn={this.state.loggedIn}
+            />}
         />
         <Route
           path="/newstory"
@@ -105,53 +97,53 @@ class App extends Component {
               username={this.state.username}
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/funny"
-            render={() =>
+        />
+        <Route
+          path="/forum/funny"
+          render={() =>
             <Funny
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/horror"
-            render={() =>
+        />
+        <Route
+          path="/forum/horror"
+          render={() =>
             <Horror
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/mystery"
-            render={() =>
+        />
+        <Route
+          path="/forum/mystery"
+          render={() =>
             <Mystery
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/fantasy"
-            render={() =>
+        />
+        <Route
+          path="/forum/fantasy"
+          render={() =>
             <Fantasy
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/romance"
-            render={() =>
+        />
+        <Route
+          path="/forum/romance"
+          render={() =>
             <Romance
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
-            path="/forum/drama"
-            render={() =>
+        />
+        <Route
+          path="/forum/drama"
+          render={() =>
             <Drama
               loggedIn={this.state.loggedIn}
             />}
-          />
-          <Route
+        />
+        <Route
           exact path="/story/:id"
           component={Comments} />
-          <Footer/>
+        <Footer />
       </div>
     );
   }
