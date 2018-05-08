@@ -88,7 +88,7 @@ class Comments extends Component {
 
                 ))}
                 {loggedIn ? (
-                    <form>
+                    <form className="commentForm">
                         <div className="col-12 mt-5">
                             <textarea className="form-input"
                                 type="text"
