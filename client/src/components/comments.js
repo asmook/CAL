@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import FirstPost from './FirstPost'
+import "./reset.css"
 import "./style.css"
 
 class Comments extends Component {
