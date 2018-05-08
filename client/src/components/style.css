@@ -126,11 +126,17 @@ input {
 }
 
 #addCommentButton{
-    
     margin-top: 20px;
-    
 }
 
 .commentForm {
     text-align:center;
+}
+
+#logintoadd {
+    margin-left: auto;
+    margin-top:  60px;
+    margin-right: auto;
+    display: block;
+    width: 80%;
 }
