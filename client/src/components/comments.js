@@ -108,7 +108,7 @@ class Comments extends Component {
                             type="submit">Submit</button>
                     </form>
                 ) : (
-                        <Link to={"/login"} className="btn btn-primary" role="button">Login to add to this story</Link>
+                        <Link to={"/login"} className="btn btn-primary" id="logintoadd" role="button">Login to add to this story</Link>
                     )}
             </div>
         )
