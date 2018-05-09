@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import './style.css'
 
@@ -9,6 +10,7 @@ class Signup extends Component {
 			username: '',
 			password: '',
 			confirmPassword: '',
+			redirectTo: null
 
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
@@ -48,46 +50,50 @@ class Signup extends Component {
 
 
 	render() {
-		return (
-			<div className="SignUpContainer">
-			<div className="SignupForm">
-				<h4>Sign up</h4>
-				<form>
-					<div className="form-group">
-							<label className="form-label" htmlFor="username"></label>
-							<input className="form-input"
-								type="text"
-								id="username"
-								name="username"
-								placeholder="Username"
-								value={this.state.username}
-								onChange={this.handleChange}
-							/>
-					</div>
+		if (this.state.redirectTo) {
+			return <Redirect to={{ pathname: this.state.redirectTo }} />
+		} else {
+			return (
+				<div className="SignUpContainer">
+					<div className="SignupForm">
+						<h4>Sign up</h4>
+						<form>
+							<div className="form-group">
+								<label className="form-label" htmlFor="username"></label>
+								<input className="form-input"
+									type="text"
+									id="username"
+									name="username"
+									placeholder="Username"
+									value={this.state.username}
+									onChange={this.handleChange}
+								/>
+							</div>
 
-					<div className="form-group">
-							<label className="form-label" htmlFor="password"> </label>
-							<input className="form-input"
-								placeholder="Password"
-								type="password"
-								name="password"
-								value={this.state.password}
-								onChange={this.handleChange}
-							/>
-					</div>
+							<div className="form-group">
+								<label className="form-label" htmlFor="password"> </label>
+								<input className="form-input"
+									placeholder="Password"
+									type="password"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleChange}
+								/>
+							</div>
 
-					<div className="form-group ">
-						<button
-							className="btn btn-primary col-mr-auto"
-							onClick={this.handleSubmit}
-							type="submit"
-						>Submit</button>
+							<div className="form-group ">
+								<button
+									className="btn btn-primary col-mr-auto"
+									onClick={this.handleSubmit}
+									type="submit"
+								>Submit</button>
+							</div>
+						</form>
 					</div>
-				</form>
-			</div>
-		</div>
-			
-		)
+				</div>
+
+			)
+		}
 	}
 }
 
