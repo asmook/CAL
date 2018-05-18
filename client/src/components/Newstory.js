@@ -51,7 +51,7 @@ class NewStory extends Component {
             <div>
                 {loggedIn ? (
                 <div>
-                    <div className="form-group">
+                    <div className="form-group newstoryform container">
                         <div className="genrePick">
                         <label className="form-label1" htmlFor="title">Pick the Genre:    </label>
                             <select name="genre" className="custom-select custom-select-md" value={this.state.genre} onChange={this.handleInputChange}>
